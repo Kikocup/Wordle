@@ -30,18 +30,33 @@ public class Game implements Serializable{
     private String[] styleclass = new String[25];
     private String[] eingaben = new String[6];
     private int[] numbers = new int[5];
-    public String[] getStyleclass() {
-        return styleclass;
-    }
     String eingabe;
     String word;
     int tries = 0;
     char letterResult;
+    public String getEingabe() {
+        return eingabe;
+    }
+    public void setEingabe(String eingabe) {
+        this.eingabe = eingabe;
+    }
+    public String[] getStyleclass() {
+        return styleclass;
+    }
+    public String getWord() {
+        return word;
+    }
+    public int getTries() {
+        return tries;
+    }
+    public void setWord(String word) {
+        this.word = word;
+    }
     public Game() {
         
     }
     public char firstLetter(){
-        char firstLette;
+    char firstLette;
     if(eingaben[1] == null){
                     firstLette = ' ';
                 }
@@ -96,13 +111,6 @@ public class Game implements Serializable{
              numbers[4]++;
              return firstLette;
         }
-    public String getEingabe() {
-        return eingabe;
-    }
-
-    public void setEingabe(String eingabe) {
-        this.eingabe = eingabe;
-    }
     public void lockIn() throws IOException, SQLException{
         if(tries == 0){
             WordlistBean bn = new WordlistBean();
@@ -118,38 +126,10 @@ public class Game implements Serializable{
                 char letter = eingaben[1].charAt(i);
                 letterResult = word.charAt(i);
                 if(letter == letterResult){
-                    if(i == 0){
-                            styleclass[1]= "red";
-                    }
-                    else if(i == 1){
-                        styleclass[2]= "red";
-                    }
-                    else if(i == 2){
-                        styleclass[3]= "red";
-                    }
-                    else if(i == 3){
-                        styleclass[4]= "red";
-                    }
-                    else if(i == 4){
-                        styleclass[5]= "red";
-                    }   
+                   styleclass[i+1]= "red";
                 }
                 else if(word.indexOf(letter) >= 0){
-                    if(i == 0){
-                        styleclass[1]= "orange";
-                    }
-                    else if(i == 1){
-                        styleclass[2]= "orange";
-                    }
-                    else if(i == 2){
-                        styleclass[3]= "orange";
-                    }
-                    else if(i == 3){
-                        styleclass[4]= "orange";
-                    }
-                    else if(i == 4){
-                        styleclass[5]= "orange";
-                    }   
+                    styleclass[i+1]= "orange";
                 }
             }
         }
@@ -162,38 +142,10 @@ public class Game implements Serializable{
                 char letter = eingaben[2].charAt(i);
                 letterResult = word.charAt(i);
                 if(letter == letterResult){
-                    if(i == 0){
-                        styleclass[6]= "red";
-                    }
-                    else if(i == 1){
-                        styleclass[7]= "red";
-                    }
-                    else if(i == 2){
-                        styleclass[8]= "red";
-                    }
-                    else if(i == 3){
-                        styleclass[9]= "red";
-                    }
-                    else if(i == 4){
-                        styleclass[10]= "red";
-                    }   
+                    styleclass[i+6]= "red";
                 }
                 else if(word.indexOf(letter) >= 0){
-                    if(i == 0){
-                        styleclass[6]= "orange";
-                    }
-                    else if(i == 1){
-                        styleclass[7]= "orange";
-                    }
-                    else if(i == 2){
-                        styleclass[8]= "orange";
-                    }
-                    else if(i == 3){
-                        styleclass[9]= "orange";
-                    }
-                    else if(i == 4){
-                        styleclass[10]= "orange";
-                    }   
+                    styleclass[i+6]= "orange";
                 }
             }
         }
@@ -206,38 +158,10 @@ public class Game implements Serializable{
                 char letter = eingaben[3].charAt(i);
                 letterResult = word.charAt(i);
                 if(letter == letterResult){
-                    if(i == 0){
-                     styleclass[11]= "red";
-                    }
-                    else if(i == 1){
-                        styleclass[12]= "red";
-                    }
-                    else if(i == 2){
-                        styleclass[13]= "red";
-                    }
-                    else if(i == 3){
-                        styleclass[14]= "red";
-                    }
-                    else if(i == 4){
-                        styleclass[15]= "red";
-                    }   
+                    styleclass[i+11]= "red";
                 }
                 else if(word.indexOf(letter) >= 0){
-                    if(i == 0){
-                        styleclass[11]= "orange";
-                    }
-                    else if(i == 1){
-                       styleclass[12]= "orange";
-                    }
-                    else if(i == 2){
-                        styleclass[13]= "orange";
-                    }
-                    else if(i == 3){
-                        styleclass[14]= "orange";
-                    }
-                    else if(i == 4){
-                        styleclass[15]= "orange";
-                    }   
+                    styleclass[i+11]= "orange";   
                 }
             }
         }
@@ -250,38 +174,10 @@ public class Game implements Serializable{
                 char letter = eingaben[4].charAt(i);
                 letterResult = word.charAt(i);
                 if(letter == letterResult){
-                    if(i == 0){
-                         styleclass[16]= "red";
-                    }
-                    else if(i == 1){
-                        styleclass[17]= "red";
-                    }
-                    else if(i == 2){
-                        styleclass[18]= "red";
-                    }
-                    else if(i == 3){
-                        styleclass[19]= "red";
-                    }
-                    else if(i == 4){
-                        styleclass[20]= "red";
-                    }   
+                    styleclass[i+16]= "red";
                 }
                 else if(word.indexOf(letter) >= 0){
-                    if(i == 0){
-                        styleclass[16]= "orange";
-                    }
-                    else if(i == 1){
-                        styleclass[17]= "orange";
-                    }
-                    else if(i == 2){
-                        styleclass[18]= "orange";
-                    }
-                    else if(i == 3){
-                        styleclass[19]= "orange";
-                    }
-                    else if(i == 4){
-                        styleclass[20]= "orange";
-                    }   
+                    styleclass[i+16]= "orange";
                 }
             }
         }
@@ -294,60 +190,21 @@ public class Game implements Serializable{
                 char letter = eingaben[5].charAt(i);
                 letterResult = word.charAt(i);
                 if(letter == letterResult){
-                    if(i == 0){
-                        styleclass[21]= "red";
-                    }
-                    else if(i == 1){
-                        styleclass[22]= "red";
-                    }
-                    else if(i == 2){
-                        styleclass[23]= "red";
-                    }
-                    else if(i == 3){
-                        styleclass[24]= "red";
-                    }
-                    else if(i == 4){
-                        styleclass[25]= "red";
-                    }   
+                    styleclass[i+21]= "red";
                 }
                 else if(word.indexOf(letter) >= 0){
-                    if(i == 0){
-                        styleclass[21]= "orange";
-                    }
-                    else if(i == 1){
-                        styleclass[22]= "orange";
-                    }
-                    else if(i == 2){
-                        styleclass[23]= "orange";
-                    }
-                    else if(i == 3){
-                        styleclass[24]= "orange";
-                    }
-                    else if(i == 4){
-                        styleclass[25]= "orange";
-                    }   
+                    styleclass[i+21]= "orange";
                 }
             }
         }
         else if(tries > 5){
             FacesContext.getCurrentInstance().getApplication().getNavigationHandler().handleNavigation(FacesContext.getCurrentInstance(), null, "lose.xhtml");
-           
         }
         Arrays.fill(numbers, 0);   
     }
-    public String getWord() {
-        return word;
-    }
-
-    public int getTries() {
-        return tries;
-    }
-
-    public void setWord(String word) {
-        this.word = word;
-    }
     public void restart(){
         tries = 0;
+        eingabe = null;
         Arrays.fill(styleclass, null);
         Arrays.fill(eingaben, null);
         Arrays.fill(numbers, 0);
