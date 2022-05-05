@@ -38,7 +38,7 @@ public class Game implements Serializable{
         return eingabe;
     }
     public void setEingabe(String eingabe) {
-        this.eingabe = eingabe;
+        this.eingabe = eingabe.toLowerCase();
     }
     public String[] getStyleclass() {
         return styleclass;
