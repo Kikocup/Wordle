@@ -16,3 +16,55 @@ and open the template in the editor.
     background-color: orange;
 
 }
+body{
+    background-color: #333333;
+}
+.game{
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+.col-4{
+    background-color: #333333;
+
+}
+.col-6{
+    background-color: #333333;
+}
+.title{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-family: fantasy;
+        background-color: #333333;
+}
+.col{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.input{
+    padding-top: 15px;
+    text-align: center;
+    color: white;
+}
+hr {
+  border-top: 1px solid white;
+  border-radius: 5px;
+}
+.admin{
+    top-padding: 50px;
+    
+}
+.lose{
+    color:white;
+    text-align: center;
+}
+.loseTitle{
+    font-size: 50px;
+}
